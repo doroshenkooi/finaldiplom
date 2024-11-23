@@ -1,5 +1,5 @@
 
-Ссылкаhttps://doroshenkooi.github.io/finaldiploma/.  
+Ссылка https://doroshenkooi.github.io/finaldiplom/.  
 
 Применен Webpack для экспорта и импорта между модулями.
 В javaScript применены:
