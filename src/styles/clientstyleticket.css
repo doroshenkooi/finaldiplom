@@ -1,0 +1,465 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 465px;
+  height: 900px;
+  left: 540px;
+  right: 2161px;
+  top: 630px;
+  background-image: url(../im/background-client.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.go_cinema-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px 0px 0px 0px;
+
+  width: 990px;
+  height: 67px;
+}
+
+.logo-go-cinema {
+  width: 212px;
+  height: 39px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 15px;
+}
+
+.payment {
+  /* Section */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 990px;
+  height: 406px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.payment-client {
+  /* Main */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 990px;
+  height: 406px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.payment-header {
+  /* Frame 2 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 990px;
+  height: 81px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.payment_before {
+  /* ::before */
+
+  width: 990px;
+  height: 3px;
+
+  background: url(src\image\image.png\clientBefore.png);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.payment-header_inner {
+  /* Header */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 15px 25px;
+
+  width: 960px;
+  height: 75px;
+
+  /* payment.html_1920x1080_default/Pampas 95% */
+  background: rgba(241, 235, 230, 0.95);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.payment-header_inner-heading {
+  /* Heading 2 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 714px 0px 0px;
+
+  width: 960px;
+  height: 25px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.payment-header_text {
+  /* Вы выбрали билеты: */
+
+  width: 546px;
+  max-width: 960px;
+  height: 25px;
+  max-height: 25.3px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  /* payment.html_1920x1080_default/Indochine */
+  color: #c76f00;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.payment_after {
+  /* ::after */
+
+  width: 990px;
+  height: 3px;
+
+  background: url(.\image\image.png\clientBefore.png);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.payment-frame {
+  /* Frame 1 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 990px;
+  height: 325px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.ticket__info-before {
+  /* ::before */
+
+  width: 990px;
+  height: 3px;
+
+  background: url(.png);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ticket__info-wrapper {
+  /* ticket__info-wrapper */
+
+  width: 990px;
+  height: 324px;
+  position: relative;
+  /* payment.html_1920x1080_default/Pampas 95% */
+  background: rgba(241, 235, 230, 0.95);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.ticket__info-film-name {
+  /* ticket__info-wrapper */
+
+  width: 990px;
+  height: 324px;
+
+  /* payment.html_1920x1080_default/Pampas 95% */
+  background: rgba(241, 235, 230, 0.95);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.ticket__info-film-name_text {
+  /* На фильм: Звёздные войны XXIII: Атака клонированных клонов */
+
+  width: 587px; /*первоначально 487px*/
+  max-width: 960px;
+  height: 18px;
+  max-height: 18.4px;
+  margin-left: 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 115% */
+  display: flex;
+  align-items: center;
+
+  /* payment.html_1920x1080_default/Black */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ticket__info-seats {
+  /* ticket__info-wrapper */
+
+  width: 990px;
+  height: 324px;
+
+  /* payment.html_1920x1080_default/Pampas 95% */
+  background: rgba(241, 235, 230, 0.95);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.ticket__info-seats-_text {
+  /* Места: 6, 7 */
+
+  width: 182px; /*первоначально 487px*/
+  max-width: 960px;
+  height: 18px;
+  max-height: 18.4px;
+  margin-left: 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 115% */
+  display: flex;
+  align-items: center;
+
+  /* payment.html_1920x1080_default/Black */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ticket__info-hall {
+  /* ticket__info */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 894px 0px 0px;
+
+  position: absolute;
+  height: 18px;
+  left: 15px;
+  right: 15px;
+  top: 37px; /*Изначально 77*/
+}
+
+.ticket__info-hall_text {
+  /* В зале: 1 */
+
+  width: 166px; /*первоначально 66px*/
+  max-width: 960px;
+  height: 18px;
+  max-height: 18.4px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* or 115% */
+  display: flex;
+  align-items: center;
+
+  /* payment.html_1920x1080_default/Black */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ticket__info-seance_begin {
+  /* ticket__info */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 799px 0px 0px;
+
+  position: absolute;
+  height: 18px;
+  left: 15px;
+  right: 15px;
+  top: 57px;
+}
+
+.ticket__hint {
+  /* ticket__hint */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 102px 0px 0px;
+
+  position: absolute;
+  height: 16px;
+  left: 15px;
+  right: 15px;
+  top: 252px;
+}
+
+.ticket__hint-text {
+  /*Покажите QR-код нашему контроллёру у входа в зал. */
+
+  width: 858px;
+  max-width: 960px;
+  height: 16px;
+  max-height: 16.1px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+
+  /* payment.html_1920x1080_default/Black */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ticket__hint-wish {
+  /* ticket__hint */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 813px 0px 0px;
+
+  position: absolute;
+  height: 16px;
+  left: 15px;
+  right: 15px;
+  top: 278px;
+}
+
+.ticket__hint-wish_text {
+  /* Приятного просмотра! */
+
+  width: 147px;
+  max-width: 960px;
+  height: 16px;
+  max-height: 16.1px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+
+  /* payment.html_1920x1080_default/Black */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.qrcode {
+  /* qr-code.png */
+
+  position: absolute;
+  width: 100px;
+  left: calc(50% - 200px / 2);
+  top: 104px;
+  bottom: 102px;
+}

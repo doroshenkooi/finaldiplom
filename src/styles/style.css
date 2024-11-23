@@ -1,0 +1,1602 @@
+body {
+  display: flex;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 474px;
+  gap: 0.3px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../image/image.png/BackGdBody1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+/*overflow-x: hidden;*/
+/**************АВТОРИЗАЦИЯ***********/
+.authorization {
+  /* Section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 35px;
+  gap: 35px;
+  isolation: isolate;
+  width: 480px;
+  height: 294px;
+  background: rgba(234, 233, 235, 0.95);
+  position: fixed;
+  top: 0px;
+  left: 480px;
+  z-index: 3;
+}
+
+.authorization-title {
+  /* Header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+  width: 480px;
+  height: 57px;
+  background: #63536c;
+}
+
+h1 {
+  /* Авторизация */
+
+  width: 161px;
+  max-width: 272px;
+  height: 25px;
+  max-height: 25.3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.authorization-form {
+  /* Form */
+  display: flex;
+  width: 480px;
+  height: 167px;
+  position: relative;
+}
+
+.form-mail {
+  /* Label */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 1.6px;
+
+  position: absolute;
+  width: 272px;
+  height: 52px;
+  left: calc(50% - 272px / 2);
+  top: -1px;
+}
+
+.authorization-input-email {
+  /* Input */
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 8.8px 9px;
+  height: 36px;
+  width: 272px;
+  background: #ffffff;
+  border: 1px solid #b7b7b7;
+}
+
+.form-password {
+  /* Label */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 1.6px;
+
+  position: absolute;
+  height: 52px;
+  left: 104px;
+  right: 104px;
+  top: 58px;
+}
+
+.authorization-input-password {
+  /* Input */
+
+  box-sizing: border-box;
+  width: 272px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #b7b7b7;
+}
+
+.authorization-button {
+  /* text-center */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 17px 41.26px 0px 41.26px;
+
+  position: absolute;
+  height: 57px;
+  left: 0px;
+  right: 0px;
+  top: 110px;
+}
+
+.authorization-btn {
+  /* Input */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 11.2px 31.5478px 11.9px 31.9322px;
+
+  width: 189px;
+  height: 40px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.authorization-btn-text {
+  /* Авторизоваться */
+
+  width: 126px;
+  height: 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: 0.2s all;
+}
+
+.authorization-btn-text:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+/**********END AUTHORIZaTION*************/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 42px 35px 104px;
+  width: 962px;
+  height: 120px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-start;
+  min-width: 320px;
+  min-height: auto;
+  left: 100px;
+  top: 50%;
+}
+
+.logo-go-cinema {
+  align-items: flex-start;
+  padding: 0px;
+  width: 212px;
+  height: 39px;
+}
+
+.logo-admin {
+  /* Администраторррская */
+  width: 216px;
+  max-width: 826px;
+  height: 12px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 962px;
+  height: auto;
+}
+
+.managament-hall {
+  display: flex;
+  position: relative;
+  min-width: 962px;
+  height: auto;
+  margin-bottom: 170px;
+}
+
+/*-----------Title-------------------------*/
+.wrapper-title {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 0px 35px 0px;
+  width: 962px;
+  max-height: 95px;
+  justify-content: center;
+  background: #63536c;
+}
+
+.connecting-blocks::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  height: 310px;
+
+  left: 61px;
+  top: 66px;
+  bottom: 0px;
+
+  background: #bc95d6;
+  z-index: 1;
+}
+
+.configuration-hall-line::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  height: 1050px;
+
+  left: 61px;
+  top: 66px;
+  bottom: 0px;
+
+  background: #bc95d6;
+  z-index: 1;
+}
+
+.prices-configuration-line::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  left: 61px;
+  top: 10px;
+  bottom: 0px;
+  background: #bc95d6;
+  z-index: 1;
+}
+
+.session-grid-line::before {
+  content: " ";
+  /* ::before */
+
+  position: absolute;
+  width: 2px;
+  left: 61px;
+  top: 0px;
+  bottom: 0px;
+
+  background: #bc95d6;
+
+  z-index: 1;
+}
+
+.wrapper-title::before {
+  content: "";
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 40px;
+  background: #ffffff;
+  border: 4px solid #bc95d6;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.title-arrow {
+  display: flex;
+  position: absolute;
+  width: 24px;
+  height: 16px;
+  right: 42px;
+  top: 40px;
+}
+
+.title-text {
+  display: flex;
+  margin-left: 100px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 584px 0px 0px;
+
+  width: 816px;
+  height: 25px;
+}
+
+h2 {
+  min-width: 242px;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/*-------------------Title---END--------------*/
+
+.wrapper-hall {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 962px;
+  height: 215px;
+  background: #eae9ebf2;
+}
+
+.choosing-room-available {
+  /* Доступные залы: */
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 131px;
+  height: 18px;
+  left: 104px;
+  top: 35px;
+}
+
+h5 {
+  /* Доступные залы: */
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 18px;
+  color: #000000;
+  margin: 0;
+}
+
+.choosing-list-managament {
+  /* List */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  height: auto;
+  left: 129px;
+  right: 42px;
+  top: 67px;
+}
+
+.choosing-hall-one {
+  /* Item */
+  /*none*/
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 732.16px 0px 0px;
+  isolation: isolate;
+  gap: 3.84px;
+  width: 791px;
+  height: 20px;
+}
+
+.choosing-hall-text {
+  /* Зал 1 */
+  display: flex;
+  width: max-content;
+  max-width: 801px;
+  height: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 18px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.dash-one {
+  /* – */
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 18px;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.basket-button {
+  /* Button */
+  background-image: url(../image/image.png/popcorn.png);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  margin: 0;
+  background-size: cover;
+  padding: 0px 0px;
+}
+
+.create-hall-button {
+  /* Button */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 11.2px 31.3815px 11.9px 31.7285px;
+  cursor: pointer;
+  position: absolute;
+  width: 159px;
+  height: 40px;
+  left: 104px;
+  top: 119px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  transition: 0.2s all;
+}
+
+.create-hall-button:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+           
+
+}
+.create-hall-text {
+  width: 96px;
+  height: 16px;
+
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/*++++++++++++++ Конфигурация зала +++++++++++*/
+.configuration-halls {
+  display: flex;
+  flex-direction: column;
+  height: 215px;
+  background: #eae9ebf2;
+  width: 962px;
+  min-height: 905px;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.configuration-hall {
+  display: flex;
+  flex-direction: column;
+  height: 215px;
+  background: #eae9ebf2;
+  width: 962px;
+  min-height: 905px;
+  position: relative;
+}
+
+.explanation {
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.55rem;
+  line-height: 18px;
+  color: #000000;
+  margin: 0;
+}
+
+.choise-hall-configure,
+.price-configur {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  position: absolute;
+  width: 251px;
+  height: 72px;
+  left: 104px;
+  top: 35px;
+}
+
+.choice-list,
+.price-list {
+  display: flex;
+  width: 962px;
+  height: 905px;
+  align-items: center;
+  z-index: 2;
+}
+
+.choice-one-hall,
+.price-one-hall,
+.open-sales-one-hall {
+  /*none*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 90px;
+  height: 46px;
+  background: #ffffff;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.24), 0px 2px 2px rgba(0, 0, 0, 0.24),
+    0px 0px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+}
+
+.hall-button-text {
+  width: max-content;
+  height: 16px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.9375rem;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.choice-two-hall::before {
+  /*none*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12.2px 20.25px 12.9px 21px;
+  width: 81px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+}
+
+.choosing-row-chairs,
+.prices-seats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  position: absolute;
+  width: 826px;
+  height: 81px;
+  left: 104px;
+  top: 178px;
+}
+
+.point-chairs {
+  display: flex;
+  width: 538px;
+  height: 51px;
+}
+
+.point-label-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 1.6px;
+  width: 100px;
+  height: 52px;
+}
+
+.point-label-one,
+.point-label-two {
+  width: auto;
+  height: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #848484;
+}
+
+.point-chairs-input-text,
+.point-row-input-text,
+.price-regular-input-text {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 8.8px 9px 8.8px;
+  width: 100px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #b7b7b7;
+}
+
+.x-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 1.6px;
+  width: 25px;
+  height: 21px;
+  font-family: "Consolas";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 21px;
+  color: #848484;
+  position: relative;
+  top: 21px;
+}
+
+.frame-chairs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 11px;
+  width: 826px;
+  height: 543px;
+  left: 104px;
+  top: 260px;
+}
+
+.frame-conf-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 414px;
+  height: 18px;
+  margin-bottom: 30px;
+}
+
+.frame-all-chairs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 23px;
+  width: 826px;
+  height: 26px;
+}
+
+.frame_chairs {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  width: auto;
+  height: 26px;
+}
+
+.chairs-text {
+  width: auto;
+  height: 16px;
+  opacity: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 16px;
+  color: #848484;
+  margin-left: 4px;
+  margin-right: 1.6px;
+}
+
+.regular-chairs {
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  background: #c4c4c4;
+  border: 1px solid #393939;
+  border-radius: 4px;
+}
+
+.vip-chairs {
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  background: #b0d6d8;
+  border: 1px solid #0a828a;
+  border-radius: 4px;
+}
+
+.blocked-chairs {
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+}
+
+.frame_hint {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 372px 0px 0px;
+  width: 826px;
+  height: 16px;
+}
+
+.frame_hint_text {
+  display: flex;
+  align-items: center;
+  width: 454px;
+  max-width: 826px;
+  height: 16px;
+  max-height: 16.1px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 16px;
+  color: #848484;
+}
+
+.frame_hall {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 0px 36px;
+  width: 826px;
+  height: auto;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.screen-text {
+  display: flex;
+  flex-direction: column;
+  width: 151px;
+  max-width: 803.6px;
+  height: 18px;
+  max-height: 18.4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 19px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.frame_hall-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 278px;
+  height: 350px;
+}
+
+.conf-step__row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 278px;
+  height: 26px;
+}
+
+.seat-selection,
+.seance-pop-up_buttons {
+  /* Fieldset */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 0px 17px;
+  gap: 15px;
+  background: #eae9ebf2;
+}
+
+.seat-selection-button,
+.price-selection-button,
+.movie-selection-button,
+.seance-btn__cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 121px;
+  height: 40px;
+  padding: 11.2px 32px 11.9px 18px;
+  background: #ffffff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  transition: 0.2s all;
+}
+.price-selection-button:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.seat-selection-button:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.movie-selection-button:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.selection-button-text,
+.seance-btn_text-cancel {
+  /* Отмена */
+
+  width: 58px;
+  height: 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #63536c;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.seat-selection-input,
+.price-selection-input,
+.movie-selection-input,
+.seance-btn__save {
+  /* Input */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 11.2px 32px 11.9px 32px;
+
+  width: 146px;
+  height: 40px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  transition: 0.2s all;
+}
+.seat-selection-input:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.price-selection-input:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.movie-selection-input:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.selection-input-text,
+.movie-btn-text,
+.seance-btn_text-save {
+  /* Сохранить */
+
+  width: 82px;
+  height: 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/*-***********Конфигурация-----цен-****************-*/
+.prices-configuration {
+  display: flex;
+  position: relative;
+}
+.price-configuration {
+  display: flex;
+  flex-direction: column;
+  background: #eae9ebf2;
+  width: 962px;
+  min-height: 391px;
+  height: auto;
+  position: relative;
+}
+
+.conf-prices {
+  /* conf-step__paragraph */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: absolute;
+  width: 251px;
+  height: 18px;
+  left: calc(50% - 251px / 2 - 256.5px);
+  top: 35px;
+}
+.price-list {
+  /* List */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 171px;
+  height: 42px;
+  left: calc(50% - 171px / 2 - 296.5px);
+  top: 65px;
+}
+
+.price-place {
+  /* conf-step__paragraph */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 555px 0px 0px;
+
+  position: absolute;
+  width: 816px;
+  height: 18px;
+  left: 104px;
+  right: 42px;
+  top: 143px;
+}
+
+.cost-type-seats,
+.cost-type-seats-vip {
+  display: flex;
+  width: 816px;
+  height: 70px;
+  opacity: 0px;
+  gap: 1.6px;
+  align-items: center;
+  position: absolute;
+  height: 51px;
+  left: 104px;
+  right: 42px;
+  top: 173px;
+}
+.cost-type-seats-vip {
+  top: 236px;
+}
+
+.price-label-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 1.6px;
+}
+
+.price-regular-chairs {
+  display: flex;
+  width: auto;
+  margin-top: 13px;
+  align-items: center;
+  gap: 1.6px;
+}
+
+.price-vip-input-text {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 8.8px 9px 8.8px;
+
+  width: 74px;
+  height: 36px;
+
+  background: #ffffff;
+  border: 1px solid #b7b7b7;
+}
+
+.price-seat-selection {
+  /* Fieldset */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 17px 0px 0px;
+  position: absolute;
+  height: 57px;
+  left: 104px;
+  right: 42px;
+  top: 299px;
+}
+
+/*=========== Сетка сеансов ==============*/
+/*Всплывающее окно*/
+.movie-data-entry,
+.seance-data-entry {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 35px;
+  gap: 35px;
+  isolation: isolate;
+  width: 40rem;
+  height: auto;
+  background: rgba(234, 233, 235, 0.95);
+  position: fixed;
+  top: 1rem;
+  left: 480px;
+  z-index: 3;
+}
+
+.movie-close-pop-up,
+.seance-close-pop-up {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.movie-data-title,
+.seance-data-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0px;
+  width: 40rem;
+  height: 3rem;
+  background: #63536c;
+}
+
+.selected {
+  opacity: 0.6;
+}
+.movie-pop-up,
+.seance__pop-up {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 36rem;
+  background: #eae9ebf2;
+  height: auto;
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+.movie-name,
+.movie-duration,
+.movie-description,
+.movie-origin,
+.movie-poster,
+.seance-hallid__input,
+.seance-filmid__input,
+.seance-time__input {
+  display: flex;
+  width: auto;
+  height: 2rem;
+  justify-content: flex-start;
+  border-radius: 0.3rem;
+  border: 1px solid #b7b7b7;
+}
+
+.movie-poster {
+  border: none;
+}
+
+.movie-pop-up-text,
+.seance-pop-up__text {
+  color: #000000;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie-btn,
+.seance-btn {
+  display: flex;
+  align-items: flex-start;
+  padding: 11.2px 31.3815px 11.9px 31.7285px;
+  cursor: pointer;
+
+  width: 159px;
+  height: 40px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0.3rem;
+  border: none;
+  transition: 0.2s all;
+}
+.movie-btn:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.seance-btn:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+/*всплывающее окно добавление сеанса*/
+.seance-time__input {
+  margin-bottom: 60px;
+}
+/*Конец всплывающее окно*/
+.session-grid {
+  display: flex;
+  position: relative;
+}
+.session-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background: #eae9ebf2;
+  width: 962px;
+  min-height: 591px;
+  height: auto;
+  position: relative;
+}
+
+.add-movie {
+  /* conf-step__paragraph */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 17px 632px 0px 0px;
+
+  position: absolute;
+  height: 57px;
+  left: 104px;
+  right: 42px;
+  top: 35px;
+}
+
+.add-movie-btn {
+  /* Button */
+
+  /* Auto layout */
+  display: flex;
+  align-items: flex-start;
+  padding: 11.2px 32px 11.9px;
+
+  width: 194px;
+  height: 40px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  transition: 0.2s all;
+}
+.add-movie-btn:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.add-movie-text {
+  /* Добавить фильм */
+
+  width: 130px;
+  height: 16px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.movie-list {
+  /* Frame 19 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 15px;
+
+  position: absolute;
+  width: 960px;
+  height: 117px;
+  left: 104px;
+  top: 104px;
+}
+
+.movie-one {
+  /* Frame 15 */
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+  width: 259px;
+  height: 52px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: move;
+  background: #caff85;
+}
+
+.movie-post {
+  width: 38px;
+  height: 50px;
+  background-size: cover;
+}
+
+.movie-conteiner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  padding: 0px 10px;
+  gap: 2px;
+
+  width: 221px;
+  height: 52px;
+}
+
+.movie-text-top {
+  width: 201px;
+  height: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  overflow-wrap: break-word;
+}
+
+.movie-text-time {
+  width: 68px;
+  height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.movie-conteiner-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 237px;
+  top: 29.7px;
+  background: #ffffff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.movie-btn-one {
+  width: 20px;
+  height: 20px;
+  background-image: url(../image/image.png/popcorn.png);
+  background-size: cover;
+  margin: 0px;
+  border: none;
+}
+
+.movie-start-time-text {
+  width: 30px;
+  height: 10px;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 70px;
+}
+
+.movie-hall-add {
+  /* conf-step__seances */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 35px;
+  gap: 35px;
+
+  position: absolute;
+  height: 192px;
+  left: 104px;
+  right: 42px;
+  top: 172px;
+}
+
+.movie-hall-add-one {
+  /* conf-step__seances-hall */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 746px;
+  height: 78px;
+}
+
+.movie-hall-title {
+  /* Heading 3 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 711px 0px 0px;
+
+  width: 746px;
+  height: 18px;
+}
+
+.movie-hall-title-text {
+  /* Зал 1 */
+
+  width: max-content;
+  max-width: 756px;
+  height: 18px;
+  max-height: 18.4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.movie-hall-time-frame {
+  /* conf-step__seances-timeline */
+  display: flex;
+  width: 720px;
+  height: 60px;
+  border: 1px solid #848484;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.movie-hall-selection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 17px 271.99px 0px 272.38px;
+  gap: 14.48px;
+
+  position: absolute;
+  height: 57px;
+  left: 104px;
+  right: 42px;
+  top: 499px;
+}
+.movie-trash {
+  display: none;
+  position: fixed;
+  left: 380px;
+  top: 400px;
+  width: 50px;
+  height: 50px;
+  background-image: url(../image/image.png/trash.png);
+  background-size: cover;
+  line-height: 100px;
+  margin-top: 20px;
+}
+
+/*================ОТКРЫТЬ ПРОДАЖИ============*/
+
+.open-sales {
+  /* Section */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+
+  width: 962px;
+  height: 371px;
+
+  background: rgba(234, 233, 235, 0.95);
+}
+
+.open-sales-hall {
+  /* conf-step__wrapper */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 42px 35px 30px;
+  gap: 29px;
+
+  width: 967px;
+  height: 237px;
+}
+
+.open-sales-сhoose-hall {
+  /* conf-step__paragraph */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 821px;
+  height: 18px;
+}
+
+.open-sales-list {
+  /* List */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  width: 821px;
+  height: 42px;
+}
+
+.everything-ready {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 313.328px 0px 313.672px;
+
+  width: 821px;
+  height: 18px;
+}
+
+.everything-ready-text {
+  /* Всё готово к открытию */
+
+  width: 199px;
+  max-width: 826px;
+  height: 18px;
+  max-height: 18.4px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.open-sales-button {
+  /* Button */
+
+  /* Auto layout */
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 11.2px, 20px, 11.9px, 20px;
+
+  width: 270px;
+  height: 40px;
+
+  background: #16a6af;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  border: none;
+  transition: 0.2s all;
+}
+.open-sales-button:active {
+  transform: scale(0.8);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) ;
+}
+
+.open-sales-text {
+  /* Открыть продажу билетов */
+
+  width: 215px;
+  height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
