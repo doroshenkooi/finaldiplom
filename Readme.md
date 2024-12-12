@@ -1,5 +1,5 @@
 
-Ссылкаhttps://doroshenkooi.github.io/finaldiploma/.  
+Ссылка https://doroshenkooi.github.io/finaldiplom/  
 
 В javaScript применены:
 - работа с датами;
