@@ -120,7 +120,7 @@ if (seanceDay !== null) {
     
       }
         
-                           if (timeNow < `${seanceTime}`) {
+                  if (timeNow < `${seanceTime}`) {
                                
                            data.result.films.forEach((film) => {
                          let movieNameText = extrMovie();
@@ -136,7 +136,7 @@ if (seanceDay !== null) {
                                   if (seance.seance_filmid == `${filmID}`) {
                                    let hallId = seance.seance_hallid;
                                   let seanceId = seance.id;
-                              //  console.log(hallId);
+            
                                 console.log(seanceId);
                                 window.localStorage.setItem("seanceId", `${seanceId}`);
                                  window.location.href = "clientHall.html";
@@ -144,7 +144,7 @@ if (seanceDay !== null) {
                                  })
                                }
                             });
-                           } else alert("Сеанс закончился"); ///
+                           } else alert("Сеанс закончился"); 
                           });
                        });
                       }
