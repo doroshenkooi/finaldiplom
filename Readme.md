@@ -1,5 +1,5 @@
 
-Ссылкаhttps://doroshenkooi.github.io/finaldiploma/.  
+Ссылка 
 
 
 В javaScript применены:
