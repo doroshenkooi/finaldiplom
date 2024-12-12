@@ -244,6 +244,7 @@ body {
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+
 }
 
 .ticket__info-film-name_text {
@@ -280,7 +281,7 @@ body {
 
   /* payment.html_1920x1080_default/Pampas 95% */
   background: rgba(241, 235, 230, 0.95);
-
+margin-top: 10px;
   /* Inside auto layout */
   flex: none;
   order: 1;
@@ -327,7 +328,7 @@ body {
   height: 18px;
   left: 15px;
   right: 15px;
-  top: 77px;
+  top: 57px;
 }
 
 .ticket__info-hall_text {
@@ -368,7 +369,7 @@ body {
   height: 18px;
   left: 15px;
   right: 15px;
-  top: 105px;
+  top: 87px;
 }
 
 .ticket__info-cost {
@@ -384,7 +385,7 @@ body {
   height: 18px;
   left: 15px;
   right: 15px;
-  top: 134px;
+  top: 117px;
 }
 
 .ticket__info-cost_text {

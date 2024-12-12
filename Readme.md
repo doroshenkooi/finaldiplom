@@ -1,7 +1,7 @@
 
 Ссылкаhttps://doroshenkooi.github.io/finaldiploma/.  
 
-Применен Webpack для экспорта и импорта между модулями.
+
 В javaScript применены:
 - работа с датами;
 - работа с DOM;

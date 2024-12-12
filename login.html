@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="src\styles\loginstyle.css">
+
+</head>
+
+<body>
+   <header class="header">
+    <div class="header-logo">
+      <div class="logo-go-cinema"><img src="src\image\image_svg\go-cinema.svg" alt="название идем в кино">
+      </div>
+      <div class="logo-admin"><span>администраторская</span>
+      </div>
+    </div>
+
+  </header>
+  <section class="authorization">
+    <div class="authorization-title">
+      <h1>Авторизация</h1>
+    </div>
+    <form class="authorization-form" action="html/sendform" method="POST">
+      <div class="form-mail">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" class="authorization-input-email" name="email" placeholder="example@domain.xyz" autocomplete="email" required>
+      
+      </div>
+      <div class="form-password">
+        <label for="password">Пароль</label>
+        <input id="password" type="password" class="authorization-input-password" name="password" required>
+      </div>
+      <div class="authorization-button">
+        <button class="authorization-btn" type="submit" id="btn-autoriz">
+          <span class="authorization-btn-text">авторизоваться</span></button>
+      </div>
+    </form>
+
+
+  </section>
+
+
+  </body>
+  <script src="src\js\login.js"></script>
+
+</html>

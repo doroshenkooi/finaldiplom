@@ -51,10 +51,8 @@ if (seanceDay !== null) {
                     const sectionMovie = document.createElement("section");
                     sectionMovie.classList.add("section_movie");
                     const movieInfo = document.createElement("div");
-                    movieInfo.classList.add("movie_info" + i);
-
+                    movieInfo.classList.add('movie_info'+i);
                     movieInfo.innerHTML = `
-         
                         <img class="movie_poster" src="${filmPoster}">  
          
                         <div class="movie_discription">
@@ -69,8 +67,8 @@ if (seanceDay !== null) {
                             <span class="movie_origin">${filmOrigin}</span>
                           </div>   
                         </div>    
+                       
                        <div class="list"></div>`;
-
                     data.result.seances.forEach((seance, i) => {
                       if (seance.seance_hallid == `${hallId}`) {
                         let seanceTime = seance.seance_time;
@@ -81,9 +79,9 @@ if (seanceDay !== null) {
                         <span class="movie_seances-text">${hallName}</span>
          
                                <div class="item">
-                                <div class="link"> 
+                                <button class="link"> 
                                 <span class="link-text">${seanceTime}</span>
-                                   </div>
+                                   </button>
                           </div>`;
 
                         sectionMovie.append(list);
@@ -99,26 +97,56 @@ if (seanceDay !== null) {
                           .getMinutes()
                           .toString()
                           .padStart(2, "0");
-                        const timeNow = `${hours}:${minutes}`;
+                      
+                          const timeNow = `${hours}:${minutes}`;
                         console.log(timeNow);
 
-                        const linkTexts =
-                          sectionMovie.querySelectorAll(".link-text");
-                        linkTexts.forEach((linkText) => {
-                          linkText.addEventListener("click", () => {
-                            if (timeNow < `${seanceTime}`) {
-                              data.result.seances.forEach((seance) => {
-                                if (seance.seance_time == `${seanceTime}`) {
-                                  let hallId = seance.seance_hallid;
-                                  console.log(hallId);
-
+                        const links = sectionMovie.querySelectorAll('.link, .link-text');
+                          
+                        links.forEach((link) => {
+                          link.addEventListener("click", (event) => {
+                            function extrMovie(){
+                              
+         let textButton = link.textContent.trim();
+         const movieElement = event.target.closest('.section_movie');
+         if (movieElement) {
+           // Находим элемент с текстом имени фильма
+           const movieNameElement = movieElement.querySelector('.movie_name-text');
+           if (movieNameElement) {
+             const movieName = movieNameElement.textContent;
+           return movieName;   
+           }
+         }
+    
+      }
+        
+                          //  if (timeNow < `${seanceTime}`) {
+                               
+                           data.result.films.forEach((film) => {
+                         let movieNameText = extrMovie();
+                         console.log(movieNameText);
+                              if (film.film_name === movieNameText) {
+                                let filmID = film.id;
+                                console.log(filmID);
+                               
+                                
                                   window.localStorage.setItem("hallId", hallId);
-                                  window.location.href = "clientHall.html";
-                                }
-                              });
-                            } else alert("Сеанс закончился"); ///
+                                
+                                 data.result.seances.forEach((seance) => {
+                                  if (seance.seance_filmid == `${filmID}`) {
+                                   let hallId = seance.seance_hallid;
+                                  let seanceId = seance.id;
+                              //  console.log(hallId);
+                                console.log(seanceId);
+                                window.localStorage.setItem("seanceId", `${seanceId}`);
+                                 window.location.href = "clientHall.html";
+                              }
+                                 })
+                               }
+                            });
+                           //} else alert("Сеанс закончился"); ///
                           });
-                        });
+                       });
                       }
                     });
                   }
@@ -133,7 +161,7 @@ if (seanceDay !== null) {
 }
  });
 });
-export function exportHallId() {
-  const hallId = window.localStorage.getItem("hallId");
-  return hallId;
+export function exportSeanceId() {
+  const seanceId = window.localStorage.getItem("seanceId");
+  return seanceId;
 }

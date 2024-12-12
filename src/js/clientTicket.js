@@ -1,17 +1,22 @@
-import { exportArraytickets } from "./client_hall.js";
-document.addEventListener("DOMContentLoaded", function () {
-  const Arraytickets = exportArraytickets();
-  console.log(Arraytickets);
 
-  const arrayQrcode = Arraytickets.map((item) => {
+document.addEventListener("DOMContentLoaded", function () {
+
+let Arraytickets = JSON.parse(localStorage.getItem("Arraytickets"));
+  console.log(Arraytickets);
+const arrayQrcode = [];
+
+const ticketsInfo = Arraytickets.map((item) => {
     return {
-      "Название фильма": item.filmname,
-      Зал: item.hallname,
-      Ряд: item.row,
-      Место: item.place,
-      Стоимость: item.price,
+      "Название фильма": item.ticket_filmname,
+      Зал: item.ticket_hallname,
+      Ряд: item.ticket_row,
+      Место: item.ticket_place,
+      Стоимость: item.ticket_price,
     };
   });
+
+
+  arrayQrcode.push(ticketsInfo);
   arrayQrcode.unshift("Билет действителен строго на свой сеанс");
 
   Arraytickets.forEach((ticket) => {
@@ -20,16 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ticketInfoWrapper.className = "ticket__info-wrapper";
     ticketInfoWrapper.innerHTML = `<div class="ticket__info-wrapper">
             <div class="ticket__info-film_name">
-                    <span class="ticket__info-film-name_text">На фильм: ${ticket.filmname}</span>
+                    <span class="ticket__info-film-name_text">На фильм: ${ticket.ticket_filmname}</span>
             </div>
 <div class="ticket__info-seats">
-    <span class="ticket__info-seats-_text">Места: ряд ${ticket.row}, место ${ticket.place}</span>
+    <span class="ticket__info-seats-_text">Места: ряд ${ticket.ticket_row}, место ${ticket.ticket_place}</span>
 </div>
 <div class="ticket__info-hall">
-    <span class="ticket__info-hall_text">В зале:  ${ticket.hallname}</span>
+    <span class="ticket__info-hall_text">В зале:  ${ticket.ticket_hallname}</span>
 </div>
 <div class="ticket__info-seance_begin">
-    <span class="ticket__info-seance_begin-text">Начало сеанса: ${ticket.time}</span>
+    <span class="ticket__info-seance_begin-text">Начало сеанса: ${ticket.ticket_time}</span>
 </div>
 <div class="qrcode" id="qrcode1"></div>
 <div class="ticket__hint">

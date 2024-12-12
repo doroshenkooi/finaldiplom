@@ -89,7 +89,7 @@ body {
   /* Начало сеанса:*/
   width: 137px;
   height: 16px;
-  top: 25px;
+  top: 35px;
   gap: 0px;
   opacity: 0px;
   font-family: Roboto;
@@ -107,6 +107,7 @@ body {
   padding: 0px 363.4px 0px 0px;
   gap: 0px;
   opacity: 0px;
+  margin-top: 10px;
 }
 
 .name_hall_text {
