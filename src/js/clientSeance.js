@@ -120,7 +120,7 @@ if (seanceDay !== null) {
     
       }
         
-                          //  if (timeNow < `${seanceTime}`) {
+                           if (timeNow < `${seanceTime}`) {
                                
                            data.result.films.forEach((film) => {
                          let movieNameText = extrMovie();
@@ -144,7 +144,7 @@ if (seanceDay !== null) {
                                  })
                                }
                             });
-                           //} else alert("Сеанс закончился"); ///
+                           } else alert("Сеанс закончился"); ///
                           });
                        });
                       }
