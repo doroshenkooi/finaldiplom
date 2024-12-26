@@ -8,7 +8,7 @@ body {
   background-image: url(../im/background-client.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 .go_cinema-header {
@@ -120,6 +120,8 @@ body {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
   border-radius: 2px;
+  align-items: center;
+  justify-content: center;
 }
 .seance_day-click {
   /* Link */
@@ -139,7 +141,7 @@ body {
   align-items: flex-start;
   padding: 0px;
   margin-left: 20px;
-  margin-top: 10px;
+
   width: 84px;
   height: 27px;
 }
@@ -150,7 +152,7 @@ body {
   display: flex;
   align-items: flex-start;
   padding: 0px 36.75px 0px 0px;
-
+  flex-direction: column;
   width: 84px;
   height: 14px;
 
@@ -168,7 +170,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 36.75px 0px 0px;
-
+  
   width: 84px;
   height: 14px;
 }
@@ -180,7 +182,7 @@ body {
   width: 47px;
   height: 13.8px;
   max-height: 13.8px;
-
+  
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -277,6 +279,27 @@ line-height: 14px;
 /* identical to box height, or 93% */
 display: flex;
 align-items: center;
+
+}
+
+.seance_day-week_text-today-six{
+  /* > */
+margin: auto;
+width: 14px;
+height: 28px;
+margin-top: 10px;
+font-family: 'Consolas';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height, or 117% */
+display: flex;
+align-items: center;
+text-align: center;
+vertical-align: middle;
+/* Colors 2/Black */
+color: #000000;
 
 }
 

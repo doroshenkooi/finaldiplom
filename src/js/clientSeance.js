@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 };
 
   let date = new Date();
-  const days = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
+  const days = ["Вс,", "Пн,", "Вт,", "Ср,", "Чт,", "Пт,", "Сб,"];
 
   const seanceDays = document.querySelectorAll(".seance_day");
 
@@ -30,10 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     seanceDay.append(seanceDayWeek);
     //сеасы открытых залов
-
-   
+    if (dayOfWeek === "Вс," || dayOfWeek === "Сб,") {
+      seanceDayWeek.querySelector('.seance_day-week_text').style.color = "red";
+      seanceDayWeek.querySelector('.seance_day-data').style.color = "red";
+    }
+    if (i === 6) {
+      const seanceDayWeekTextElements = document.querySelectorAll('.seance_day-week');
+      if (seanceDayWeekTextElements.length > 6) {
+        seanceDayWeekTextElements[6].classList.add('seance_day-week_text-today-six');
+        seanceDayWeekTextElements[6].textContent = '>';
+      }
+    }
     if (i === 0) {
       toggleClickClasses(seanceDay);
+      seanceDayWeek.style.marginTop = "10px" ;
+      document.querySelector('.seance_day-week_text-today').style.flexDirection = "row";
     }
 
     seanceDay.addEventListener("click", () => {
