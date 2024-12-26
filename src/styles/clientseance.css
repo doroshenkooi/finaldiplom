@@ -1,15 +1,17 @@
 body {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   position: relative;
   padding: 0px 465px;
   height: 1183px;
   background-image: url(../im/background-client.jpeg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   overflow-x: hidden;
 }
+
 
 .go_cinema-header {
   display: flex;
