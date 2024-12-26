@@ -8,7 +8,7 @@ body {
   background-image: url(../im/background-client.jpeg);
   background-repeat: repeat;
   background-size: cover;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 
