@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function getTodayDate() {
-  return new Date();
+  return getFormattedDate(); 
 }
 
 function fetchData(seanceId, todayDate) {
@@ -178,32 +178,39 @@ function postOrderData(params) {
           storeTicketData(data);
 
          
-              window.location.href = "clientpayment.html";
+             window.location.href = "clientpayment.html";
          
       });
 }
-//сохраняем масств с данными места
+//сохраняем массив с данными места
 function storeTicketData(data) {
-  let Arraytickets = [];
-  data.result.forEach((item) => {
+  if (data && Array.isArray(data.result)) {
+    let Arraytickets = [];
+    data.result.forEach((item) => {
       Arraytickets.push(item);
       console.log(item);
-  });
-  window.localStorage.setItem("Arraytickets", JSON.stringify(Arraytickets));
+    });
+    window.localStorage.setItem("Arraytickets", JSON.stringify(Arraytickets));
+  } else {
+    console.error("Invalid data format", data);
+  }
   console.log(data);
 }
 
 function initializeApp() {
   const seanceId = exportSeanceId();
-  const todayDate = getTodayDate();
+  const todayDate = getTodayDate(); 
   console.log(todayDate);
 
   fetchData(seanceId, todayDate)
       .then(data => {
-          console.log(data);
+          console.log(data); 
 
           const tickets = appendRowsToWrapper(data);
           setupOrderButton(tickets);
+      })
+      .catch(error => {
+          console.error("Error fetching data:", error);
       });
 }
 

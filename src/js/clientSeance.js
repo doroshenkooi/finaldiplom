@@ -1,4 +1,12 @@
+
 document.addEventListener("DOMContentLoaded", function () {
+ const cinemaEntryBtn = document.querySelector(".go_cinema-entry");
+  if (cinemaEntryBtn !== null){
+  cinemaEntryBtn.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+};
+
   let date = new Date();
   const days = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 
@@ -21,14 +29,44 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>`;
 
     seanceDay.append(seanceDayWeek);
- //сеасы открытых залов
-if (seanceDay !== null) {
-  seanceDay.addEventListener("click", function () {
+    //сеасы открытых залов
+
+   
+    if (i === 0) {
+      toggleClickClasses(seanceDay);
+    }
+
+    seanceDay.addEventListener("click", () => {
+      // Убираем классы у всех дней сеансов
+      seanceDays.forEach((day) => toggleClickClasses(day, false));
+
+      // Добавляем классы к текущему кликнутому дню
+      toggleClickClasses(seanceDay);
+    });
+  
+
+  function toggleClickClasses(seanceDay, toggle = true) {
+    const method = toggle ? "add" : "remove";
+
+    seanceDay.classList[method]("seance_day-click");
+    const weekToday = seanceDay.querySelector(".seance_day-week_today");
+    if (weekToday) {
+      weekToday.classList[method]("seance_day-week_today-click");
+    }
+    const weekText = seanceDay.querySelector(".seance_day-week_text");
+    if (weekText) {
+      weekText.classList[method]("seance_day-week_text-click");
+    }
+    const dateData = seanceDay.querySelector(".seance_day-data");
+    if (dateData) {
+      dateData.classList[method]("seance_day-data-click");
+    }
+  }
     fetch("https://shfe-diplom.neto-server.ru/alldata")
       .then((response) => response.json())
       .then((data) => {
         const hallClient = document.querySelector(".hall-client");
-        hallClient.innerHTML ='';
+        hallClient.innerHTML = "";
         // открываем только открытые залы
         data.result.halls.forEach((hall) => {
           if (hall.hall_open == 1) {
@@ -51,7 +89,7 @@ if (seanceDay !== null) {
                     const sectionMovie = document.createElement("section");
                     sectionMovie.classList.add("section_movie");
                     const movieInfo = document.createElement("div");
-                    movieInfo.classList.add('movie_info'+i);
+                    movieInfo.classList.add("movie_info" + i);
                     movieInfo.innerHTML = `
                         <img class="movie_poster" src="${filmPoster}">  
          
@@ -97,69 +135,70 @@ if (seanceDay !== null) {
                           .getMinutes()
                           .toString()
                           .padStart(2, "0");
-                      
-                          const timeNow = `${hours}:${minutes}`;
-                        console.log(timeNow);
 
-                        const links = sectionMovie.querySelectorAll('.link, .link-text');
-                          
+                        const timeNow = `${hours}:${minutes}`;
+
+                        const links =
+                          sectionMovie.querySelectorAll(".link, .link-text");
+
                         links.forEach((link) => {
                           link.addEventListener("click", (event) => {
-                            function extrMovie(){
-                              
-         let textButton = link.textContent.trim();
-         const movieElement = event.target.closest('.section_movie');
-         if (movieElement) {
-           // Находим элемент с текстом имени фильма
-           const movieNameElement = movieElement.querySelector('.movie_name-text');
-           if (movieNameElement) {
-             const movieName = movieNameElement.textContent;
-           return movieName;   
-           }
-         }
-    
-      }
-        
-                  if (timeNow < `${seanceTime}`) {
-                               
-                           data.result.films.forEach((film) => {
-                         let movieNameText = extrMovie();
-                         console.log(movieNameText);
-                              if (film.film_name === movieNameText) {
-                                let filmID = film.id;
-                                console.log(filmID);
-                               
-                                
-                                  window.localStorage.setItem("hallId", hallId);
-                                
-                                 data.result.seances.forEach((seance) => {
-                                  if (seance.seance_filmid == `${filmID}`) {
-                                   let hallId = seance.seance_hallid;
-                                  let seanceId = seance.id;
-            
-                                console.log(seanceId);
-                                window.localStorage.setItem("seanceId", `${seanceId}`);
-                                 window.location.href = "clientHall.html";
+                            const target = event.target.classList.contains('link') 
+                       ? event.target.querySelector('.link-text') : event.target;
+
+        let textButton = target.textContent;
+
+                            function extrMovie() {
+                              const movieElement =
+                                event.target.closest(".section_movie");
+                              if (movieElement) {
+                                // Находим элемент с текстом имени фильма
+                                const movieNameElement =
+                                  movieElement.querySelector(
+                                    ".movie_name-text"
+                                  );
+                                if (movieNameElement) {
+                                  const movieName =
+                                    movieNameElement.textContent;
+                                  return movieName;
+                                }
                               }
-                                 })
-                               }
-                            });
-                           } else alert("Сеанс закончился"); 
+                            }
+
+                            if (timeNow < textButton) {
+                              data.result.films.forEach((film) => {
+                                let movieNameText = extrMovie();
+
+                                if (film.film_name === movieNameText) {
+                                  let filmID = film.id;
+                                  console.log(filmID);
+
+                                  data.result.seances.forEach((seance) => {
+                                    if (seance.seance_filmid == `${filmID}` && seance.seance_time == textButton) {
+                                      let seanceId = seance.id;
+                                      window.localStorage.setItem(
+                                        "seanceId",
+                                        `${seanceId}`
+                                      );
+                                     window.location.href = "clientHall.html";
+                                    }
+                                  });
+                                }
+                              });
+                            } else alert("Сеанс закончился");
                           });
-                       });
+                        });
                       }
                     });
                   }
                 });
               }
             });
-            console.log(data);
           }
         });
       });
+    //});
   });
-}
- });
 });
 export function exportSeanceId() {
   const seanceId = window.localStorage.getItem("seanceId");
