@@ -6,9 +6,9 @@ body {
   padding: 0px 465px;
   height: 1183px;
   background-image: url(../im/background-client.jpeg);
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-size: cover;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 
