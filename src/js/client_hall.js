@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       data.result.seances.forEach((seance) => {
         const seanceId = exportSeanceId();
         console.log(seanceId);
+        
         if (seance.id == `${seanceId}`) {
           
           let filmId = seance.seance_filmid;
@@ -80,9 +81,10 @@ function getTodayDate() {
   return getFormattedDate(); 
 }
 
-function fetchData(seanceId, todayDate) {
-  return fetch(`https://shfe-diplom.neto-server.ru/hallconfig?seanceId=${seanceId}&date=${todayDate}`)
-      .then((response) => response.json());
+async function fetchData(seanceId, todayDate) {
+  console.log(todayDate);
+  const response = await fetch(`https://shfe-diplom.neto-server.ru/hallconfig?seanceId=${seanceId}&date=${todayDate}`);
+  return await response.json();
 }
 
 function createChair(seatType, rowIndex, seatIndex, tickets) {
@@ -145,15 +147,15 @@ function appendRowsToWrapper(data) {
   return tickets;
 }
 
-function setupOrderButton(tickets) {
+function setupOrderButton(tickets, todayDate) {
   const orderButton = document.querySelector(".order_button");
   orderButton.addEventListener("click", function () {
       const seanceId = exportSeanceId();
-      const formattedDate = getFormattedDate();
-
+      //const formattedDate = getFormattedDate();
+     
       const params = new FormData();
       params.set("seanceId", seanceId);
-      params.set("ticketDate", JSON.stringify(formattedDate));
+      params.set("ticketDate", JSON.stringify(todayDate));
       params.set("tickets", JSON.stringify(tickets));
 
       postOrderData(params);
@@ -161,11 +163,16 @@ function setupOrderButton(tickets) {
 }
 
 function getFormattedDate() {
+let selectedDates = window.localStorage.getItem('selectedDates');
+  if (selectedDates === null) {
   const today = new Date();
   const day = String(today.getDate()).padStart(2, "0");
   const month = String(today.getMonth() + 1).padStart(2, "0");
   const year = today.getFullYear();
   return `${year}.${month}.${day}`;
+  } else {
+    return selectedDates;
+  }
 }
 //отправляем данные на сервер
 function postOrderData(params) {
@@ -205,9 +212,9 @@ function initializeApp() {
   fetchData(seanceId, todayDate)
       .then(data => {
           console.log(data); 
-
+          console.log(todayDate);
           const tickets = appendRowsToWrapper(data);
-          setupOrderButton(tickets);
+          setupOrderButton(tickets, todayDate);
       })
       .catch(error => {
           console.error("Error fetching data:", error);

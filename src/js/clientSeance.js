@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const days = ["Вс,", "Пн,", "Вт,", "Ср,", "Чт,", "Пт,", "Сб,"];
 
   const seanceDays = document.querySelectorAll(".seance_day");
-
+  let selectedDate = null; 
+ 
   seanceDays.forEach((seanceDay, i) => {
     let nextDate = new Date(date);
     nextDate.setDate(date.getDate() + i);
@@ -53,6 +54,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Добавляем классы к текущему кликнутому дню
       toggleClickClasses(seanceDay);
+
+       // Сохраняем выбранную дату
+       selectedDate = nextDate.toISOString().split('T')[0];
+      
+       
+       // Добавляем классы к link-text
+       const linkTextElements = document.querySelectorAll('.link-text');
+       linkTextElements.forEach(linkText => {
+         linkText.classList.add("selected"); 
+       linkText.setAttribute("data-selected", selectedDate); 
+      
+      });
+
     });
   
 
@@ -73,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
       dateData.classList[method]("seance_day-data-click");
     }
   }
+  
+  function funFetch() {
     fetch("https://shfe-diplom.neto-server.ru/alldata")
       .then((response) => response.json())
       .then((data) => {
@@ -138,6 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         hallClient.append(sectionMovie);
 
                         const currentDate = new Date();
+                        const day = String(currentDate.getDate()).padStart(2, "0");
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+  const year = currentDate.getFullYear();
+  let toDayData = `${year}-${month}-${day}`;
+                        
                         const hours = currentDate
                           .getHours()
                           .toString()
@@ -156,7 +177,11 @@ document.addEventListener("DOMContentLoaded", function () {
                           link.addEventListener("click", (event) => {
                             const target = event.target.classList.contains('link') 
                        ? event.target.querySelector('.link-text') : event.target;
-
+                      let linkText = document.querySelector('.link-text');
+                       window.localStorage.setItem(
+                        "linkText",
+                        `${linkText}`
+                      );
         let textButton = target.textContent;
 
                             function extrMovie() {
@@ -175,16 +200,24 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                               }
                             }
+let selectedDates  = linkText.getAttribute("data-selected");
 
-                            if (timeNow < textButton) {
-                              data.result.films.forEach((film) => {
+window.localStorage.removeItem('selectedDates');
+window.localStorage.setItem('selectedDates', JSON.stringify(selectedDates));
+
+console.log(selectedDates);
+console.log(toDayData);
+
+                            if (timeNow < textButton || toDayData < selectedDates)
+                              {
+                              data.result.films.map((film) => {
                                 let movieNameText = extrMovie();
 
                                 if (film.film_name === movieNameText) {
                                   let filmID = film.id;
                                   console.log(filmID);
 
-                                  data.result.seances.forEach((seance) => {
+                                  data.result.seances.map((seance) => {
                                     if (seance.seance_filmid == `${filmID}` && seance.seance_time == textButton) {
                                       let seanceId = seance.id;
                                       window.localStorage.setItem(
@@ -192,11 +225,14 @@ document.addEventListener("DOMContentLoaded", function () {
                                         `${seanceId}`
                                       );
                                      window.location.href = "clientHall.html";
-                                    }
+                                  }
                                   });
                                 }
                               });
                             } else alert("Сеанс закончился");
+                            alert = function(){};
+                            alert("test");
+                            
                           });
                         });
                       }
@@ -208,7 +244,13 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-    //});
+    //});  
+    
+    }
+ if (i === 0) {
+  funFetch();
+  } 
+   
   });
 });
 export function exportSeanceId() {

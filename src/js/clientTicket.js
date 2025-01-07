@@ -8,6 +8,8 @@ const arrayQrcode = [];
 const ticketsInfo = Arraytickets.map((item) => {
     return {
       "Название фильма": item.ticket_filmname,
+      Дата: item.ticket_date,
+      Время: item.ticket_time,
       Зал: item.ticket_hallname,
       Ряд: item.ticket_row,
       Место: item.ticket_place,
