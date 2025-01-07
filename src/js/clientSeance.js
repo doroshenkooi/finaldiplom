@@ -58,13 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
        // Сохраняем выбранную дату
        selectedDate = nextDate.toISOString().split('T')[0];
       
-       
-       // Добавляем классы к link-text
-       const linkTextElements = document.querySelectorAll('.link-text');
-       linkTextElements.forEach(linkText => {
-         linkText.classList.add("selected"); 
-       linkText.setAttribute("data-selected", selectedDate); 
-      
+  const linkTextElements = document.querySelectorAll('.link-text');
+  linkTextElements.forEach(linkText => {
+    linkText.classList.add("selected");
+    // Обновляем data-date 
+    linkText.setAttribute("data-date", selectedDate); 
       });
 
     });
@@ -134,7 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>    
                        
                        <div class="list"></div>`;
-                    data.result.seances.forEach((seance, i) => {
+                   
+                     const currentDate = new Date();
+                        const day = String(currentDate.getDate()).padStart(2, "0");
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+  const year = currentDate.getFullYear();
+  let toDayData = `${year}-${month}-${day}`;
+                   
+                       data.result.seances.forEach((seance, i) => {
                       if (seance.seance_hallid == `${hallId}`) {
                         let seanceTime = seance.seance_time;
                         const list = document.createElement("div");
@@ -145,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
          
                                <div class="item">
                                 <button class="link"> 
-                                <span class="link-text">${seanceTime}</span>
+                                <span class="link-text" data-date="${toDayData}">${seanceTime}</span>
                                    </button>
                           </div>`;
 
@@ -153,11 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         sectionMovie.prepend(movieInfo);
                         hallClient.append(sectionMovie);
 
-                        const currentDate = new Date();
-                        const day = String(currentDate.getDate()).padStart(2, "0");
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
-  const year = currentDate.getFullYear();
-  let toDayData = `${year}-${month}-${day}`;
+                      
                         
                         const hours = currentDate
                           .getHours()
@@ -178,10 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             const target = event.target.classList.contains('link') 
                        ? event.target.querySelector('.link-text') : event.target;
                       let linkText = document.querySelector('.link-text');
-                       window.localStorage.setItem(
-                        "linkText",
-                        `${linkText}`
-                      );
+               
+                       window.localStorage.setItem("linkText",`${linkText}` );
+                        
+                        
+                     
         let textButton = target.textContent;
 
                             function extrMovie() {
@@ -200,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                               }
                             }
-let selectedDates  = linkText.getAttribute("data-selected");
+let selectedDates  = linkText.getAttribute("data-date");
 
 window.localStorage.removeItem('selectedDates');
 window.localStorage.setItem('selectedDates', JSON.stringify(selectedDates));
@@ -208,7 +210,7 @@ window.localStorage.setItem('selectedDates', JSON.stringify(selectedDates));
 console.log(selectedDates);
 console.log(toDayData);
 
-                            if (timeNow < textButton || toDayData < selectedDates)
+                            if (timeNow < textButton && toDayData === selectedDates|| toDayData < selectedDates)
                               {
                               data.result.films.map((film) => {
                                 let movieNameText = extrMovie();

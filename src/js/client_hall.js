@@ -151,8 +151,6 @@ function setupOrderButton(tickets, todayDate) {
   const orderButton = document.querySelector(".order_button");
   orderButton.addEventListener("click", function () {
       const seanceId = exportSeanceId();
-      //const formattedDate = getFormattedDate();
-     
       const params = new FormData();
       params.set("seanceId", seanceId);
       params.set("ticketDate", JSON.stringify(todayDate));
@@ -164,15 +162,7 @@ function setupOrderButton(tickets, todayDate) {
 
 function getFormattedDate() {
 let selectedDates = window.localStorage.getItem('selectedDates');
-  if (selectedDates === null) {
-  const today = new Date();
-  const day = String(today.getDate()).padStart(2, "0");
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const year = today.getFullYear();
-  return `${year}.${month}.${day}`;
-  } else {
     return selectedDates;
-  }
 }
 //отправляем данные на сервер
 function postOrderData(params) {
