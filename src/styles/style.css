@@ -340,6 +340,385 @@ h5 {
   color: #ffffff;
 }
 
+/*----------------------create hall start-----------*/
+
+
+.popup_hall {
+  /* popup__content */
+
+/* Auto layout */
+display: none;
+flex-direction: column;
+align-items: center;
+padding: 0px 0px 35px;
+gap: 34px;
+
+position: absolute;
+width: 960px;
+height: 260px;
+top: 120px;
+
+z-index: 3;
+
+background: rgba(234, 233, 235, 0.95);
+
+}
+.popup_hall-header {
+  /* popup__header */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 42px 14px;
+width: 880px;
+height: 57px;
+justify-content: center;
+
+background: #63536C;
+
+
+}
+.popup_hall-heading {
+  /* Heading 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 606px;
+
+width: 876px;
+height: 27px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.popup_hall-heading-text {
+  /* Добавление Зала */
+
+margin: 0 auto;
+width: 248px;
+max-width: 876px;
+height: 25px;
+max-height: 25.3px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 25px;
+/* identical to box height, or 114% */
+display: flex;
+align-items: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.popup_hall-heading-close {
+  /* close.png */
+
+margin: 0 auto;
+width: 22px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.popup_form {
+  /* popup__form */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 0px 8.00002px;
+gap: 8px;
+
+width: 960px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.popup_label {
+  /* popup__form */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px 0px 8.00002px;
+gap: 8px;
+
+width: 960px;
+height: 60px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.popup_label-text {
+  /* Label */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 2px;
+
+width: 750px;
+height: 52px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.popup_label-txt {
+  /* Название зала */
+
+width: 84px;
+height: 14px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height, or 117% */
+display: flex;
+align-items: center;
+
+color: #848484;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.popup_input {
+  /* Input */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+
+width: 750px;
+height: 35px;
+
+background: #FFFFFF;
+border: 1px solid #B7B7B7;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.popup_input-text {
+  /* div#placeholder */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 510.4px 0px 0px;
+
+width: max-content;
+height: 19px;
+border: none;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.popup_input-text::placeholder {
+  /* Например, «Зал 1» */
+
+width: 140px;
+height: 19px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #757575;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.popup_button {
+  /* conf-step__buttons */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 14px;
+
+width: 347px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+.popup_button-add {
+  /* Input */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 11.2px 32px 11.9px;
+
+width: 194px;
+height: 40px;
+
+background: #16A6AF;
+box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+border-radius: 3px;
+border: none;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.popup_button-add-txt {
+  /* Добавить фильм */
+display: inline-block;
+width: 130px;
+height: 16px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.popup_button-cancel {
+  /* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 11.2px 31.2423px 11.9px 31.5577px;
+
+width: 139px;
+height: 40px;
+
+background: #FFFFFF;
+box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+border-radius: 3px;
+border: none;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.popup_button-cancel-txt {
+/* Отменить */
+
+width: 76px;
+height: 16px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+display: flex;
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+
+color: #63536C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+/*---------popup hall end--------------------*/
 /*++++++++++++++ Конфигурация зала +++++++++++*/
 .configuration-halls {
   display: flex;
@@ -934,7 +1313,8 @@ h5 {
 }
 
 .movie-close-pop-up,
-.seance-close-pop-up {
+.seance-close-pop-up,
+.popup_hall-heading-close {
   position: absolute;
   right: 1rem;
   top: 1rem;

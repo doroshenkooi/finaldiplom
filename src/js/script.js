@@ -3,10 +3,26 @@
 document.addEventListener("DOMContentLoaded", function addHall() {
   const createHallButton = document.getElementById("btn-create-hall");
   if (createHallButton !== null) {
-    createHallButton.addEventListener("click", function () {
-      // Получаем название нового кинозала
 
-      const newName = prompt("Введите название нового кинозала:");
+    createHallButton.addEventListener("click", function () {
+      const popupHall = document.querySelector('.popup_hall');
+      // Получаем название нового кинозала
+      popupHall.style.display = "flex";
+       const popupButtonClose = document.querySelector('.popup_hall-heading-close');
+       popupButtonClose.addEventListener('click', function () {
+    popupHall.style.display = "none";
+   })
+   const popupButtonCancel = document.querySelector('.popup_button-cancel');
+   popupButtonCancel.addEventListener('click', function () {
+    popupHall.style.display = "none";
+   })
+      const popupButtonAdd = document.querySelector('.popup_button-add');
+      popupButtonAdd.addEventListener('click', function () {
+   const newName = document.querySelector('.popup_input-text').value;
+   popupHall.style.display = "none";
+
+  
+
 
       const newHall = document.createElement("div");
       newHall.className = "choosing-hall-one";
@@ -291,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function addHall() {
               console.error("Ошибка:", error);
             });
         });
+      });
     });
   }
 });

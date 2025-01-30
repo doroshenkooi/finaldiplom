@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
-  function funFetch() {
+ function funFetch() {
     fetch("https://shfe-diplom.neto-server.ru/alldata")
       .then((response) => response.json())
       .then((data) => {
@@ -158,8 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         sectionMovie.prepend(movieInfo);
                         hallClient.append(sectionMovie);
 
-                      
-                        
                         const hours = currentDate
                           .getHours()
                           .toString()
@@ -176,16 +174,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         links.forEach((link) => {
                           link.addEventListener("click", (event) => {
-                            const target = event.target.classList.contains('link') 
-                       ? event.target.querySelector('.link-text') : event.target;
-                      let linkText = document.querySelector('.link-text');
-               
+                             const target = event.currentTarget.classList.contains('link')
+       ? event.currentTarget.querySelector('.link-text')
+       : event.currentTarget;
+                     let linkText = target;
                        window.localStorage.setItem("linkText",`${linkText}` );
-                        
-                        
                      
         let textButton = target.textContent;
-
+        window.localStorage.setItem('textButton', JSON.stringify(textButton));
                             function extrMovie() {
                               const movieElement =
                                 event.target.closest(".section_movie");
@@ -210,35 +206,40 @@ window.localStorage.setItem('selectedDates', JSON.stringify(selectedDates));
 console.log(selectedDates);
 console.log(toDayData);
 
-                            if (timeNow < textButton && toDayData === selectedDates|| toDayData < selectedDates)
+                            if (timeNow < textButton && toDayData === selectedDates || toDayData < selectedDates)
                               {
-                              data.result.films.map((film) => {
+                              data.result.films.forEach((film) => {
                                 let movieNameText = extrMovie();
 
                                 if (film.film_name === movieNameText) {
                                   let filmID = film.id;
                                   console.log(filmID);
 
-                                  data.result.seances.map((seance) => {
-                                    if (seance.seance_filmid == `${filmID}` && seance.seance_time == textButton) {
+                                  data.result.seances.forEach((seance) => {
+                                    
+                                    if (seance.seance_filmid == `${filmID}`) {
+                                    
                                       let seanceId = seance.id;
+                                      console.log(seanceId);
                                       window.localStorage.setItem(
                                         "seanceId",
                                         `${seanceId}`
                                       );
-                                     window.location.href = "clientHall.html";
+                                      
+                                      console.log("Redirecting to clientHall.html");
+                                       window.location.href = "clientHall.html";
+                                      
                                   }
                                   });
-                                }
-                              });
-                            } else alert("Сеанс закончился");
+                                }  
+                              });      
+                            }  else alert("Сеанс закончился");
                             alert = function(){};
                             alert("test");
-                            
                           });
                         });
-                      }
-                    });
+                      }  
+                    }); 
                   }
                 });
               }
@@ -258,4 +259,9 @@ console.log(toDayData);
 export function exportSeanceId() {
   const seanceId = window.localStorage.getItem("seanceId");
   return seanceId;
+}
+
+export function exporttextButton() {
+  const textButton = window.localStorage.getItem("textButton");
+  return textButton;
 }

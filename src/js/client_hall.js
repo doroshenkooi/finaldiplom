@@ -1,4 +1,4 @@
-import { exportSeanceId } from "./clientSeance.js";
+import { exportSeanceId, exporttextButton } from "./clientSeance.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   fetch("https://shfe-diplom.neto-server.ru/alldata")
@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
       data.result.seances.forEach((seance) => {
         const seanceId = exportSeanceId();
         console.log(seanceId);
-        
+        const textButton = exporttextButton();
         if (seance.id == `${seanceId}`) {
           
           let filmId = seance.seance_filmid;
           let hallId = seance.seance_hallid;
-          let seanceTime = seance.seance_time;
+          let seanceTime = textButton;
           console.log(seanceId);
          
 
@@ -182,16 +182,19 @@ function postOrderData(params) {
 //сохраняем массив с данными места
 function storeTicketData(data) {
   if (data && Array.isArray(data.result)) {
-    let Arraytickets = [];
-    data.result.forEach((item) => {
-      Arraytickets.push(item);
-      console.log(item);
+    const Arraytickets = data.result.map((item) => {
+      const textButton = exporttextButton();
+      const updatedItem = { ...item, ticket_time: textButton };
+
+      console.log(updatedItem);
+      return updatedItem; 
     });
+
     window.localStorage.setItem("Arraytickets", JSON.stringify(Arraytickets));
   } else {
     console.error("Invalid data format", data);
   }
-  console.log(data);
+
 }
 
 function initializeApp() {
