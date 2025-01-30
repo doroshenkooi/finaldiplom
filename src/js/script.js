@@ -55,9 +55,7 @@ document.addEventListener("DOMContentLoaded", function addHall() {
        
           console.log(data);
         })
-        .catch((error) => {
-          console.error("Ошибка:", error);
-        });
+     
 
       const newHallnew = document.querySelector(".choosing-list-managament");
       newHallnew.appendChild(newHall);
