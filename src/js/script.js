@@ -1,6 +1,14 @@
 //создание зала
 
 document.addEventListener("DOMContentLoaded", function addHall() {
+  fetch('https://shfe-diplom.neto-server.ru/alldata')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // Выводим данные в консоль
+    })
+    .catch(error => {
+      console.error('Ошибка при получении данных:', error);
+    });
   const createHallButton = document.getElementById("btn-create-hall");
   if (createHallButton !== null) {
 
